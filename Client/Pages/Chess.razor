@@ -1,0 +1,34 @@
+﻿@page "/Chess"
+
+<PageTitle>News plus puzzle</PageTitle>
+
+<h1>Daily chess puzzle</h1>
+
+<iframe style="width: 400px; height: 560px;" src="https://www.chess.com/daily_puzzle" frameborder="0"></iframe>
+<button style="position: absolute; top: 350px; right: 400px; width: 200px; height: 60px; background-color: lightblue" @onclick="ShowMessage">Kliknij by wyświetlić wiadomości</button>
+<button style="position: absolute; top: 450px; right: 400px; width: 200px; height: 60px; background-color: lightblue" @onclick="HideMessage">Ukryj wiadomości</button>
+
+
+
+@if (showMessage)
+{
+    <h1>Superbet  Poland 2024</h1>
+
+    <iframe width="1366" height="786" frameborder="0" src="https://www.chess.com/events/embed/2024-gct-superbet-poland-rapid-blitz"></iframe>
+}
+
+@code {
+
+    private bool showMessage = false;
+
+    private void ShowMessage()
+    {
+        showMessage = true;
+    }
+
+    private void HideMessage()
+    {
+        showMessage = false;
+    }
+
+}
